@@ -39,13 +39,13 @@ This plugin builds each variation of REQUEST_URI by peicing together other avail
     
 5. If for some reason you're using this plugin _outside_ of the Concentric/XO shared hosting enviroment (assuming Apache) use the following .htaccess rules:
 
-    <IfModule mod_rewrite.c>
+    `<IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
-    </IfModule>
+    </IfModule>`
 
 Changelog
 ---------
