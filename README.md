@@ -19,7 +19,6 @@ This plugin makes WordPress' default permalinks behavior work on the Concentric/
 
 Description
 -----------
-
 This plugin ensures the REQUEST_URI variable is set during the initialization of WordPress, allowing permalinks to work correctly.
 
 
@@ -32,15 +31,23 @@ This plugin builds each variation of REQUEST_URI by peicing together other avail
 1. Upload the 'permalink-fix-disable-canonical-redirects-pack' folder to the 'wp-content/plugins/' directory.
 2. Log into the WordPress dashboard http://example.com/wp-admin and activate the plugin.
 3. Setup your .htaccess file as described below, this is the most important step.
-
-Frequently Asked Questions
---------------------------
-
-_Make sure the .htaccess file is setup properly._ The server requires that you convert end of line characters to UNIX format (LF). Be sure to add a hard return after the last directive.
+4. _Make sure the .htaccess file is setup properly._ The server requires that you convert end of line characters to UNIX format (LF). Be sure to add a hard return after the last directive. See additional-instructions.rtf for a step-by-step.
 
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
+    
+5. If for some reason you're using this plugin _outside_ of the Concentric/XO shared hosting enviroment (assuming Apache) use the following .htaccess rules:
+
+    # BEGIN WordPress
+    <IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
+    </IfModule>
+    # END WordPress
 
 Changelog
 ---------
