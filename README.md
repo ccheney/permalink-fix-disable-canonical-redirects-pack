@@ -2,6 +2,7 @@
 Permalink Fix &amp; Disable Canonical Redirects
 ==============================================
 
+Use: WordPress Plugin
 Contributors: Chris Cheney, Nick Schalk, Michael Szczepanski  
 Plugin Name: XO Permalink Fix & Disable Canonical Redirects Pack  
 Plugin URI: http://www.g0tweb.com/request_uri  
