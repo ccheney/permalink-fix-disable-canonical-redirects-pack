@@ -33,18 +33,18 @@ This plugin builds each variation of REQUEST_URI by peicing together other avail
 3. Setup your .htaccess file as described below, this is the most important step.
 4. _Make sure the .htaccess file is setup properly._ The server requires that you convert end of line characters to UNIX format (LF). Be sure to add a hard return after the last directive. See additional-instructions.rtf for a step-by-step.
 
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
+    `RewriteCond %{REQUEST_FILENAME} !-d  
+    RewriteCond %{REQUEST_FILENAME} !-f  
+    RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]`
     
 5. If for some reason you're using this plugin _outside_ of the Concentric/XO shared hosting enviroment (assuming Apache) use the following .htaccess rules:
 
-    `<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteBase /
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
+    `<IfModule mod_rewrite.c>  
+    RewriteEngine On  
+    RewriteBase /  
+    RewriteCond %{REQUEST_FILENAME} !-f  
+    RewriteCond %{REQUEST_FILENAME} !-d  
+    RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]  
     </IfModule>`
 
 Changelog
