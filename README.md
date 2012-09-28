@@ -39,7 +39,6 @@ This plugin builds each variation of REQUEST_URI by peicing together other avail
     
 5. If for some reason you're using this plugin _outside_ of the Concentric/XO shared hosting enviroment (assuming Apache) use the following .htaccess rules:
 
-    # BEGIN WordPress
     <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
@@ -47,7 +46,6 @@ This plugin builds each variation of REQUEST_URI by peicing together other avail
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
     </IfModule>
-    # END WordPress
 
 Changelog
 ---------
