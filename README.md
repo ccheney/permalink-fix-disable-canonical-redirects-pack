@@ -1,6 +1,7 @@
 
 Permalink Fix &amp; Disable Canonical Redirects
 ==============================================
+http://wordpress.org/extend/plugins/permalink-fix-disable-canonical-redirects-pack/
 
 Use: WordPress Plugin  
 Contributors: Chris Cheney, Nick Schalk, Michael Szczepanski  
