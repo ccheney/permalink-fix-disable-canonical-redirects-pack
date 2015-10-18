@@ -4,16 +4,27 @@ Permalink Fix &amp; Disable Canonical Redirects
 http://wordpress.org/extend/plugins/permalink-fix-disable-canonical-redirects-pack/
 
 Use: WordPress Plugin
+
 Contributors: Chris Cheney, Nick Schalk, Michael Szczepanski
+
 Plugin Name: Permalink Fix & Disable Canonical Redirects Pack
+
 Plugin URI: https://github.com/ccheney/permalink-fix-disable-canonical-redirects-pack
+
 Tags: 500 server error, parsing error, ashurbanipal, canonical redirection, cnchost, concentric, endless loop, endless redirection, home page loop, htaccess, permalinks, xo communications, xohost, concentric
+
 Author URI: https://github.com/ccheney/
+
 Author: Chris Cheney
+
 Requires at least: 2.3
+
 Tested up to: 4.3.1
+
 Stable tag: 1.0.4
+
 Version: 1.0.4
+
 License: GPLv2
 
 This plugin makes WordPress' default permalinks behavior work on the Concentric/XO Communications shared hosting platform. It also disables the canonical redirection feature as it causes an endless redirection loop outside of wp-admin. This plugin also appears to resolve an issue with a recent release of WordPress 3.1 and IIS servers.
