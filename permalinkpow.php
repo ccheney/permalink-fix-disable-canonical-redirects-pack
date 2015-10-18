@@ -32,19 +32,18 @@ RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
 
 */
 add_action('init', 'requesturipow_init');
+
 function requesturipow_init() {
-		{
-		if(isset($_REQUEST['q'])) {
-		$_SERVER['REQUEST_URI'] = "/" . $_REQUEST["q"];
-		}else{
-		if (empty($_SERVER['QUERY_STRING'])) {
-		$_SERVER['REQUEST_URI'] = $_SERVER['SCRIPT_NAME'];
-			   } else {
-		$_SERVER['REQUEST_URI'] = $_SERVER['SCRIPT_NAME'] . "?" .
-		$_SERVER['QUERY_STRING'];
-			   }
-			 }
-		}
+    if(isset($_REQUEST['q'])) {
+        $_SERVER['REQUEST_URI'] = "/" . $_REQUEST["q"];
+    } else {
+        if (empty($_SERVER['QUERY_STRING'])) {
+            $_SERVER['REQUEST_URI'] = $_SERVER['SCRIPT_NAME'];
+        } else {
+            $_SERVER['REQUEST_URI'] = $_SERVER['SCRIPT_NAME'] . "?" . $_SERVER['QUERY_STRING'];
+        }
+    }
 }
-	remove_filter('template_redirect', 'redirect_canonical');
+
+remove_filter('template_redirect', 'redirect_canonical');
 ?>
