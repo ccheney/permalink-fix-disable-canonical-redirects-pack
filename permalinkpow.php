@@ -20,7 +20,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 /*
 Plugin Name: Permalink Fix & Disable Canonical Redirects Pack
 Plugin Author: Nick Schalk & Chris Cheney
-Plugin URI: http://www.g0tweb.com/request_uri
+Plugin URI: https://github.com/ccheney/permalink-fix-disable-canonical-redirects-pack
 Version: 1.0
 Description: For WordPress installations residing on Concentric/XO Communications shared hosting platform only. This plugin enables WordPress' Permalink functionality & disables the canonical redirect feature. Remember to select your custom permalink setting in the dashboard. Disable canonical redirect snippet by Mark Jaquith. This plugin also appears to resolve an issue with the recent release of WordPress 3.1 and IIS servers.
 
